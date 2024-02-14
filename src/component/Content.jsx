@@ -4,6 +4,7 @@ import { useState } from "react";
 function Content() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+  const yesButtonSize = noCount * 20 + 16;
 
   const getNoButtonText = () => {
     const phrases = [
@@ -41,21 +42,11 @@ function Content() {
           <div className="py-12">
             <Spline scene="https://prod.spline.design/7VghYX3WbzK2hEbP/scene.splinecode" />
             <div className="flex items-center justify-center gap-4">
-              <button className="btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 stroke-red-500 fill-red-600"
-                  fill="none"
-                  viewBox="0 0 24 24 "
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
+              <button
+                className={`bg-red-700 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl mr-4`}
+                style={{ fontSize: yesButtonSize }}
+                onClick={() => setYesPressed(true)}
+              >
                 Yes
               </button>
               <button className="btn" onClick={handleNoClick}>
