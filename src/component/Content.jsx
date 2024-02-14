@@ -1,6 +1,8 @@
 import Spline from "@splinetool/react-spline";
 import { useState } from "react";
-
+import Happy from "./Happy";
+import Header from "./Header";
+import Intro from "./Intro";
 function Content() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
@@ -36,12 +38,17 @@ function Content() {
       <div className="bg-red-800  ">
         {yesPressed ? (
           <>
-            <div className="text-4xl font-bold my-4">Ok yay!!!</div>
+            <Happy />
           </>
         ) : (
-          <div className="py-12">
+          <div className="pb-12">
+            <Header />
+            <Intro />
             <Spline scene="https://prod.spline.design/7VghYX3WbzK2hEbP/scene.splinecode" />
-            <div className="flex items-center justify-center gap-4">
+            <a className="flex items-center justify-center mb-12 text-white text-3xl font-extrabold ">
+              Your choice 👇
+            </a>
+            <div className=" flex items-center justify-center gap-4">
               <button
                 className={`bg-red-700 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl mr-4`}
                 style={{ fontSize: yesButtonSize }}
@@ -49,7 +56,7 @@ function Content() {
               >
                 Yes
               </button>
-              <button className="btn" onClick={handleNoClick}>
+              <button className="btn hover:bg-gray-800" onClick={handleNoClick}>
                 {noCount === 0 ? "No" : getNoButtonText()}
               </button>
             </div>

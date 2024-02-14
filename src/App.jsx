@@ -1,16 +1,10 @@
-import Header from "./component/Header"
-import Intro from "./component/Intro"
-import Content from "./component/Content"
-function App () {
-  
-
+import Content from "./component/Content";
+function App() {
   return (
-   <div>
-    <Header/>
-    <Intro/>
-    <Content/>
-   </div>
-  )
+    <div>
+      <Content />
+    </div>
+  );
 }
 
-export default App
+export default App;
