@@ -2,7 +2,31 @@ import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 
 function Content() {
+  const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
+
+  const getNoButtonText = () => {
+    const phrases = [
+      "No",
+      "Are you sure?",
+      "Really sure?",
+      "Think again!",
+      "Last chance!",
+      "Surely not?",
+      "You might regret this!",
+      "Give it another thought!",
+      "Are you absolutely certain?",
+      "This could be a mistake!",
+      "Have a heart!",
+      "Don't be so cold!",
+      "Change of heart?",
+      "Wouldn't you reconsider?",
+      "Is that your final answer?",
+      "You're breaking my heart ;(",
+    ];
+
+    return phrases[Math.min(noCount, phrases.length - 1)];
+  };
   return (
     <div className="mx-auto max-w-9xl">
       <div className="bg-red-800  ">
@@ -31,23 +55,7 @@ function Content() {
                 </svg>
                 Yes
               </button>
-              <button className="btn">
-                No
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </button>
+              <button className="btn">No</button>
             </div>
           </div>
         )}
