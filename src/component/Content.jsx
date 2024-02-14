@@ -27,6 +27,9 @@ function Content() {
 
     return phrases[Math.min(noCount, phrases.length - 1)];
   };
+  const handleNoClick = () => {
+    setNoCount(noCount + 1);
+  };
   return (
     <div className="mx-auto max-w-9xl">
       <div className="bg-red-800  ">
@@ -55,7 +58,9 @@ function Content() {
                 </svg>
                 Yes
               </button>
-              <button className="btn">No</button>
+              <button className="btn" onClick={handleNoClick}>
+                {noCount === 0 ? "No" : getNoButtonText()}
+              </button>
             </div>
           </div>
         )}
