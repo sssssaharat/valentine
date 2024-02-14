@@ -1,4 +1,4 @@
-function header() {
+function Header() {
   return (
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-rose-500 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
       <div
@@ -50,4 +50,4 @@ function header() {
   )
 }
 
-export default header
+export default Header
