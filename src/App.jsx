@@ -1,5 +1,6 @@
 import Header from "./component/Header"
 import Intro from "./component/Intro"
+import Content from "./component/Content"
 function App () {
   
 
@@ -7,6 +8,7 @@ function App () {
    <div>
     <Header/>
     <Intro/>
+    <Content/>
    </div>
   )
 }
