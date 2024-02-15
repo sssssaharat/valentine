@@ -7,7 +7,7 @@ function Intro() {
         <div className="mx-6">
           <img
             className="h-full w-full object-cover rounded-3xl shadow-2xl"
-            src="src/assets/content.jpg"
+            src="/content.jpg"
           />
         </div>
       </div>

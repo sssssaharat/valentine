@@ -8,21 +8,19 @@ export const Happy = () => {
       renderImageBuffer={50}
       rotationRange={25}
       images={[
-        "src/assets/imgs/1.PNG",
-        "src/assets/imgs/2.PNG",
-        "src/assets/imgs/3.PNG",
-        "src/assets/imgs/4.PNG",
-        "src/assets/imgs/5.PNG",
-        "src/assets/imgs/6.PNG",
-        "src/assets/imgs/7.PNG",
-        "src/assets/imgs/8.PNG",
-        "src/assets/imgs/9.PNG",
-        "src/assets/imgs/10.PNG",
-        "src/assets/imgs/11.PNG",
-        "src/assets/imgs/12.PNG",
-        "src/assets/imgs/13.PNG",
-        "src/assets/imgs/14.PNG",
-        "src/assets/imgs/15.PNG",
+        "imgs/1.PNG",
+        "imgs/2.PNG",
+        "imgs/3.PNG",
+        "imgs/4.PNG",
+        "imgs/5.PNG",
+        "imgs/6.PNG",
+        "imgs/7.PNG",
+        "imgs/8.PNG",
+        "imgs/9.PNG",
+        "imgs/10.PNG",
+        "imgs/11.PNG",
+        "imgs/12.PNG",
+       
       ]}
     >
       <section className="grid h-screen w-full place-content-center bg-gradient-to-r from-rose-500 to-red-700">
